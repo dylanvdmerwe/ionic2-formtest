@@ -10,32 +10,56 @@
     <form>
       <p>First Name</p>
       <ion-item>
-        <ion-label hidden>First Name</ion-label>
-        <ion-input type='text' autocomplete autocorrect></ion-input>
+        <ion-label hidden></ion-label>
+        <ion-input type='text'></ion-input>
       </ion-item>
 
       <p>Surname</p>
       <ion-item>
-        <ion-label hidden>Surname</ion-label>
+        <ion-label hidden></ion-label>
         <ion-input type='text'></ion-input>
       </ion-item>
 
       <p>Mobile Number</p>
       <ion-item>
-        <ion-label hidden>Mobile Number</ion-label>
+        <ion-label hidden></ion-label>
         <ion-input type='tel'></ion-input>
       </ion-item>
 
       <p>Email Address</p>
       <ion-item>
-        <ion-label hidden>Email Address</ion-label>
+        <ion-label hidden></ion-label>
         <ion-input type='email'></ion-input>
+      </ion-item>
+
+      <p>AutoComplete Test Field</p>
+      <ion-item>
+        <ion-label hidden></ion-label>
+        <ion-input type='text' autocomplete></ion-input> <!-- http://www.w3schools.com/tags/att_input_autocomplete.asp -->
+      </ion-item>
+
+      <p>AutoCorrect Test Field</p>
+      <ion-item>
+        <ion-label hidden></ion-label>
+        <ion-input type='text' autocorrect></ion-input>
+      </ion-item>
+
+      <p>AutoComplete & AutoCorrect Test Field</p>
+      <ion-item>
+        <ion-label hidden></ion-label>
+        <ion-input type='text' autocorrect autocomplete></ion-input>
+      </ion-item>
+
+      <p>AutoCapitalize Test Field</p>
+      <ion-item>
+        <ion-label hidden></ion-label>
+        <ion-input type='text' autocapitalize="words"></ion-input> <!-- https://developers.google.com/web/updates/2015/04/autocapitalize?hl=en -->
       </ion-item>
 
       <p>Year of Study</p>
       <ion-item>
         <ion-label hidden>Year of Study</ion-label>
-        <ion-select [(ngModel)]="yearOfStudy" style='max-width:90%' [ngFormControl]='ctrlYearOfStudy'>
+        <ion-select style='max-width:90%'>
           <ion-option value=1>1</ion-option>
           <ion-option value=2>2</ion-option>
           <ion-option value=3 checked>3</ion-option>
