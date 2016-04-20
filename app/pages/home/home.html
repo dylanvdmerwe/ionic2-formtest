@@ -1,0 +1,69 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Ionic 2 Form
+  </ion-title>
+</ion-navbar>
+
+<ion-content padding class='home'>
+  <ion-list no-lines>
+    <h3>Share some information with us about yourself.</h3>
+    <form>
+      <p>First Name</p>
+      <ion-item>
+        <ion-label hidden>First Name</ion-label>
+        <ion-input type='text' autocomplete autocorrect></ion-input>
+      </ion-item>
+
+      <p>Surname</p>
+      <ion-item>
+        <ion-label hidden>Surname</ion-label>
+        <ion-input type='text'></ion-input>
+      </ion-item>
+
+      <p>Mobile Number</p>
+      <ion-item>
+        <ion-label hidden>Mobile Number</ion-label>
+        <ion-input type='tel'></ion-input>
+      </ion-item>
+
+      <p>Email Address</p>
+      <ion-item>
+        <ion-label hidden>Email Address</ion-label>
+        <ion-input type='email'></ion-input>
+      </ion-item>
+
+      <p>Year of Study</p>
+      <ion-item>
+        <ion-label hidden>Year of Study</ion-label>
+        <ion-select [(ngModel)]="yearOfStudy" style='max-width:90%' [ngFormControl]='ctrlYearOfStudy'>
+          <ion-option value=1>1</ion-option>
+          <ion-option value=2>2</ion-option>
+          <ion-option value=3 checked>3</ion-option>
+          <ion-option value=4>4</ion-option>
+          <ion-option value=5>5</ion-option>
+          <ion-option value=6>6</ion-option>
+          <ion-option value=7>7</ion-option>
+          <ion-option value=8>8</ion-option>
+          <ion-option value=9>9</ion-option>
+          <ion-option value=10>10</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-row style='margin-top:20px'>
+        <ion-item>
+          <ion-label>Can we contact you?</ion-label>
+          <ion-toggle #permission checked="true"></ion-toggle>
+        </ion-item>
+      </ion-row>
+
+
+      <p>Why did you decide to study Computer Science?</p>
+      <ion-item>
+        <ion-label hidden>First Name</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+    </form>
+    <div style='margin-bottom: 30px'></div>
+    <button block primary>Let's Go</button>
+  </ion-list>
+</ion-content>
